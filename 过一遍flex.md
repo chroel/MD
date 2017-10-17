@@ -1,6 +1,16 @@
 这篇来讲 
 **display:flex**
 
+
+----
+
+**推荐阅读**
+
+[一个完整的Flexbox指南](http://www.w3cplus.com/css3/a-guide-to-flexbox-new.html)
+    
+[Flexbox指南（W3C兴趣小组翻译）](https://www.w3.org/html/ig/zh/css-flex-1/)
+
+
 ----
 
 **主要内容参考来自**
@@ -119,7 +129,7 @@ box-sizing：**一些专家甚至<font color="red">建议所有的Web开发者�
 
 ---------
 
-##display
+## display
 
 display CSS属性指定用于元素的呈现框的类型，生成多种不同的生成的元素的盒类型
 
@@ -201,7 +211,7 @@ display CSS属性指定用于元素的呈现框的类型，生成多种不同的
 
 1. flex-direction
 2. flex-wrap
-3. flex-flow
+3. flex-flow（flex-direction属性和flex-wrap属性的简写，默认值row nowrap）
 4. justify-content
 5. align-items
 6. align-content
@@ -314,7 +324,7 @@ space-around | 每根轴线两侧的间隔都相等。所以，轴线之间的�
 2. flex-grow
 3. flex-shrink
 4. flex-basis
-5. flex
+5. flex（flex-grow，flex-shrink和flex-basis的简写，默认值为0 1 auto;）
 6. align-self
 
 <font color="#aaa">=======华丽丽的分割线=======</font>
@@ -372,6 +382,10 @@ space-around | 每根轴线两侧的间隔都相等。所以，轴线之间的�
 
 <font color="red">**建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。**</font>
 
+这里有图↓，flex,flex-grow，flex-shrink和flex-basis的区分：
+
+![flex,flex-grow，flex-shrink和flex-basis的区分](https://i.imgur.com/dxKdNMx.png)
+
 <font color="#aaa">=======华丽丽的分割线=======</font>
 
 6.0 align-self属性，允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认auto，表示继承父元素的align-items属性。如果没有父元素，则等同于stretch
@@ -403,9 +417,13 @@ flex-grow
 
 ### Flexbox和box的区别
 
-今年都2017了，支持不支持什么的应该都没啥了
 
-大概就是
+浏览器支持情况：
+
+ ![浏览器支持情况](https://dn-coding-net-production-pp.qbox.me/28418dde-b345-47c3-8c7e-4d4b4cf73c9f.png) 
+
+
+不同的就是：
 
 1. box的话，文字超出是不会撑开div的吧；但是flex就会，像这样
 
